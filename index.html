@@ -1,17 +1,21 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Livraria Saber+</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="grid-container">
     <header>
-      <h1>📚 Livraria Saber+</h1>
+      <div class="logo">
+        <img src="img/logo.jpg" alt="Livraria Saber+" style="height: 100px;">
+        <h1>Livraria Saber+</h1>
+      </div>
     </header>
 
     <nav>
@@ -23,43 +27,76 @@
     </nav>
 
     <section class="banner">
-      <img src="img/banner.jpg" alt="Banner Livros">
+      <img src="img/banner.jpg" alt="Banner da Livraria Saber+">
     </section>
 
     <main>
       <h2>Lançamentos</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="img/livro1.jpg" alt="Livro 1">
-          <h3>O Hobbit</h3>
-          <p>R$ 39,90</p>
+      <form method="post" action="finalizado.html">
+        <div class="cards">
+          <div class="card">
+            <img src="img/livro1.jpg" alt="O Hobbit">
+            <h3>O Hobbit</h3>
+            <p>R$ 39,90</p>
+            <label><input type="checkbox" name="livros" value="O Hobbit"> Adicionar</label>
+          </div>
+
+          <div class="card">
+            <img src="img/livro2.jpg" alt="1984">
+            <h3>1984</h3>
+            <p>R$ 29,90</p>
+            <label><input type="checkbox" name="livros" value="1984"> Adicionar</label>
+          </div>
+
+          <div class="card">
+            <img src="img/livro3.jpg" alt="Dom Quixote">
+            <h3>Dom Quixote</h3>
+            <p>R$ 49,90</p>
+            <label><input type="checkbox" name="livros" value="Dom Quixote"> Adicionar</label>
+          </div>
+
+          <div class="card">
+            <img src="img/livro4.jpg" alt="Orgulho e Preconceito">
+            <h3>Orgulho e Preconceito</h3>
+            <p>R$ 34,50</p>
+            <label><input type="checkbox" name="livros" value="Orgulho e Preconceito"> Adicionar</label>
+          </div>
+
+          <div class="card">
+            <img src="img/livro5.jpg" alt="A Revolução dos Bichos">
+            <h3>A Revolução dos Bichos</h3>
+            <p>R$ 24,90</p>
+            <label><input type="checkbox" name="livros" value="A Revolução dos Bichos"> Adicionar</label>
+          </div>
+
+          <div class="card">
+            <img src="img/livro6.jpg" alt="A Guerra dos Tronos">
+            <h3>A Guerra dos Tronos</h3>
+            <p>R$ 59,90</p>
+            <label><input type="checkbox" name="livros" value="A Guerra dos Tronos"> Adicionar</label>
+          </div>
         </div>
-        <div class="card">
-          <img src="img/livro2.jpg" alt="Livro 2">
-          <h3>1984</h3>
-          <p>R$ 29,90</p>
+
+        <div class="checkout">
+          <h3>Finalizar Compra</h3>
+
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" required>
+
+          <label for="pagamento">Forma de Pagamento:</label>
+          <select id="pagamento" name="pagamento" required>
+            <option value="">Selecione</option>
+            <option value="boleto">Boleto Bancário</option>
+            <option value="cartao">Cartão de Crédito</option>
+            <option value="pix">PIX</option>
+          </select>
+
+          <button type="submit">Concluir Pedido</button>
         </div>
-        <div class="card">
-          <img src="img/livro3.jpg" alt="Livro 3">
-          <h3>Dom Quixote</h3>
-          <p>R$ 49,90</p>
-        </div>
-        <div class="card">
-          <img src="img/livro4.jpg" alt="Livro 4">
-          <h3>Orgulho e Preconceito</h3>
-          <p>R$ 34,90</p>
-        </div>
-        <div class="card">
-          <img src="img/livro5.jpg" alt="Livro 5">
-          <h3>A Revolução dos Bichos</h3>
-          <p>R$ 24,90</p>
-        </div>
-        <div class="card">
-          <img src="img/livro6.jpg" alt="Livro 6">
-          <h3>A Guerra dos Tronos</h3>
-          <p>R$ 59,90</p>
-        </div>
-      </div>
+      </form>
     </main>
 
     <footer>
